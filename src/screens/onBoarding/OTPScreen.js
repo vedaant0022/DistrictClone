@@ -79,7 +79,7 @@ const OTPScreen = () => {
             errorMessage("4-digit OTP required")
           }
           else {
-            navigation.navigate("Home")
+            navigation.navigate("Location")
           }
           
         }}
@@ -113,7 +113,7 @@ const OTPScreen = () => {
                 ref={(el) => (otpRefs.current[index] = el)}
                 style={{
                   width: 80,
-                  height: 50,
+                  height: 60,
                   borderWidth: 1,
                   borderColor: '#5f5e63',
                   textAlign: 'center',
@@ -122,6 +122,7 @@ const OTPScreen = () => {
                   borderRadius: 9,
                   backgroundColor: '#0d0e12',
                   color: '#fff',
+                  
                 }}
                 keyboardType="numeric"
                 maxLength={1}
@@ -141,7 +142,7 @@ const OTPScreen = () => {
             marginTop: moderateScaleVertical(35),
             transform: [{ translateY }],
           }}>
-            <View style={{ alignItems: 'center', alignSelf: 'center' ,marginTop:moderateScaleVertical(370)}}>
+            <View style={{ alignItems: 'center', alignSelf: 'center' ,marginTop:moderateScaleVertical(360)}}>
               {button()}
             </View>
 
