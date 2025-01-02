@@ -2,6 +2,8 @@ import { View, Text, SafeAreaView, TouchableOpacity, PermissionsAndroid, Alert }
 import React from 'react'
 import { moderateScale, moderateScaleVertical } from '../../styles/responsive/responsiveSize'
 import Geolocation from 'react-native-geolocation-service';
+
+
 import { errorMessage, successMessage } from '../../utils';
 import { useNavigation } from '@react-navigation/native';
 
@@ -68,9 +70,10 @@ const Location = () => {
                     </View>
 
                     <TouchableOpacity 
-                    onPress={requestLocationPermission}
+                    // onPress={requestLocationPermission}
+                    onPress={()=>{navigation.navigate('Home')}}
                     style={{ backgroundColor: '#fff', width: moderateScale(350), height: moderateScaleVertical(50), borderRadius: 12, alignItems: 'center', justifyContent: 'center',marginTop:moderateScaleVertical(35) }}>
-                        <Text style={{ color: '#323233', fontSize: 18, fontWeight: '900', letterSpacing: 1 }}>Use current location</Text>
+                        <Text style={{ color: '#323233', fontSize: 18, fontWeight: '700', letterSpacing: 1 }}>Use current location</Text>
                     </TouchableOpacity>
 
                     <View style={{marginTop:moderateScaleVertical(25)}}>
