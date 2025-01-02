@@ -7,6 +7,7 @@ import Splash from '../screens/Splash/Splash';
 import OTPScreen from '../screens/onBoarding/OTPScreen';
 import Home from '../screens/HomeScreen/Home';
 import Location from '../screens/onBoarding/Location';
+import Profile from '../screens/Profile/Profile';
 
 const Nav = () => {
     const Stack = createNativeStackNavigator();
@@ -31,6 +32,9 @@ const Nav = () => {
         animation:'ios_from_right',
       }}/>
       <Stack.Screen name="Location" component={Location} options={{
+        animation:'ios_from_right',
+      }}/>
+      <Stack.Screen name="Profile" component={Profile} options={{
         animation:'ios_from_right',
       }}/>
   
